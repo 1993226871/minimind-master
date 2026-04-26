@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.DS_Store
+out/
+checkpoints/
+*.pth
+trainer/swanlog/
+.idea/
+node_modules/
+
+# Large dataset files (use Git LFS or download separately)
+dataset/*.jsonl
+!dataset/dataset.md
+minimind-3/model.safetensors
