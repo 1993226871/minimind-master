@@ -51,19 +51,25 @@
 
 ### 预训练损失曲线
 
-![预训练总损失](./images/pretrain_loss.jpg)
+| 总损失（Total Loss） | Logits损失 |
+|:---:|:---:|
+| ![预训练总损失](./images/pretrain_loss_ours.jpg) | ![预训练Logits损失](./images/pretrain_logits_loss_ours.jpg) |
 
 预训练阶段，模型从随机初始化的参数开始学习语言的通用表示。损失从高处快速下降，第1-2轮训练后趋于平稳。
 
 ### SFT全参数微调损失曲线
 
-![SFT损失](./images/sft_loss.jpg)
+| 总损失（Total Loss） | Logits损失 |
+|:---:|:---:|
+| ![SFT总损失](./images/sft_loss_ours.jpg) | ![SFT Logits损失](./images/sft_logits_loss_ours.jpg) |
 
 全参数微调更新所有模型权重。观察发现20 epoch后损失仍持续下降，结合评测结果确认已出现**过拟合**现象。
 
 ### LoRA微调损失曲线
 
-![LoRA损失](./images/grpo_loss.jpg)
+| 总损失（Total Loss） | Logits损失 |
+|:---:|:---:|
+| ![LoRA总损失](./images/lora_loss_ours.jpg) | ![LoRA Logits损失](./images/lora_logits_loss_ours.jpg) |
 
 LoRA仅保留0.8MB的适配器权重，参数量仅为全参数的 **0.1%**，同时保持了相对较好的泛化能力。
 
